@@ -11,8 +11,7 @@ do
         chmod 777 $2/$j
 
         if [[ $i ==  $j ]]; then
-            echo "$1$i == $2$j"
-            diff $1/$i $2/$j
+            diff $1/$i $2/$j >> outputs/$(basename "$j").txt
             
         fi
     done
